@@ -17,7 +17,7 @@ Hacktoberfest® encourages participation in the open source community..
 
 ⚠️ Do not just re-edit the file or make some small changes this kind of PRs will not be accepted.
 
-🔴Do not add anyone else's work in this repository.It will leads to failure of your pull request.
+🔴 Do not add anyone else's work in this repository.It will leads to failure of your pull request.
 
 ### **Steps To Generate PR(Pull Request)**  
 🚨 Fork this repository by clicking on the fork button on the top of this page. This will create a copy of this repository in your account.⭐
