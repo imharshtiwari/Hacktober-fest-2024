@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html data-theme="light">
+  <head>
+    <style>
+      :root[data-theme="light"] {
+        --bg-color: #f8f9fa;
+        --calculator-bg: #ffffff;
+        --button-bg: #f1f3f5;
+        --button-color: #212529;
+        --display-bg: #ffffff;
+        --display-color: #212529;
+        --operator-bg: #339af0;
+        --operator-color: #ffffff;
+        --equals-bg: #1c7ed6;
+        --clear-bg: #fa5252;
+        --shadow-color: rgba(0, 0, 0, 0.1);
+      }
+
+      :root[data-theme="dark"] {
+        --bg-color: #1a1b1e;
+        --calculator-bg: #25262b;
+        --button-bg: #2c2e33;
+        --button-color: #e9ecef;
+        --display-bg: #2c2e33;
+        --display-color: #e9ecef;
+        --operator-bg: #339af0;
+        --operator-color: #ffffff;
+        --equals-bg: #1c7ed6;
+        --clear-bg: #fa5252;
+        --shadow-color: rgba(0, 0, 0, 0.3);
+      }
+
+      body {
+        background-color: var(--bg-color);
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        transition: background-color 0.3s ease;
+      }
+
+      .calculator {
+        width: 350px;
+        background-color: var(--calculator-bg);
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: 0 10px 30px var(--shadow-color);
+        transition: all 0.3s ease;
+      }
+
+      .calculator-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .theme-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+        color: var(--button-color);
+      }
+
+      .theme-toggle:hover {
+        background-color: var(--button-bg);
+      }
+
+      #display {
+        width: 100%;
+        height: 80px;
+        margin-bottom: 20px;
+        font-size: 36px;
+        text-align: right;
+        padding: 15px;
+        box-sizing: border-box;
+        border: none;
+        background-color: var(--display-bg);
+        color: var(--display-color);
+        border-radius: 12px;
+        font-family: inherit;
+        transition: all 0.3s ease;
+      }
+
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+      }
+
+      button {
+        padding: 20px;
+        font-size: 20px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        background-color: var(--button-bg);
+        color: var(--button-color);
+        transition: all 0.2s ease;
+        font-family: inherit;
+        font-weight: 500;
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.1);
+      }
+
+      button:active {
+        transform: translateY(0);
+      }
+
+      .operator {
+        background-color: var(--operator-bg);
+        color: var(--operator-color);
+      }
+
+      .equals {
+        background-color: var(--equals-bg);
+        color: var(--operator-color);
+      }
+
+      .clear {
+        background-color: var(--clear-bg);
+        color: white;
+      }
+
+      .calculator-title {
+        color: var(--button-color);
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="calculator-header">
+        <h2 class="calculator-title">Calculator</h2>
+        <button class="theme-toggle" onclick="toggleTheme()">
+          <svg
+            id="theme-icon"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+        </button>
+      </div>
+      <input type="text" id="display" readonly />
+      <div class="buttons">
+        <button class="clear" onclick="clearDisplay()">C</button>
+        <button onclick="appendToDisplay('(')">(</button>
+        <button onclick="appendToDisplay(')')">)</button>
+        <button class="operator" onclick="appendToDisplay('/')">÷</button>
+
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button class="operator" onclick="appendToDisplay('*')">×</button>
+
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button class="operator" onclick="appendToDisplay('-')">−</button>
+
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button class="operator" onclick="appendToDisplay('+')">+</button>
+
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('.')">.</button>
+        <button
+          class="equals"
+          onclick="calculate()"
+          style="grid-column: span 2"
+        >
+          =
+        </button>
+      </div>
+    </div>
+
+    <script>
+      let display = document.getElementById("display");
+      const html = document.documentElement;
+      const themeIcon = document.getElementById("theme-icon");
+
+      function appendToDisplay(value) {
+        display.value += value;
+      }
+
+      function clearDisplay() {
+        display.value = "";
+      }
+
+      function isValidExpression(expr) {
+        if (!expr || /^[+\-*/.]+$/.test(expr)) {
+          return false;
+        }
+
+        if (/[+\-*/.]{2,}/.test(expr)) {
+          return false;
+        }
+
+        let parenthesesCount = 0;
+        for (let char of expr) {
+          if (char === "(") parenthesesCount++;
+          if (char === ")") parenthesesCount--;
+          if (parenthesesCount < 0) return false;
+        }
+        if (parenthesesCount !== 0) return false;
+
+        return true;
+      }
+
+      function calculate() {
+        try {
+          if (!display.value) {
+            return;
+          }
+
+          if (!isValidExpression(display.value)) {
+            display.value = "Error";
+            return;
+          }
+
+          let result = display.value.replace(/×/g, "*").replace(/÷/g, "/");
+
+          result = eval(result);
+
+          if (!isFinite(result)) {
+            display.value = "Error";
+            return;
+          }
+
+          display.value = Number(result.toFixed(8)).toString();
+        } catch (error) {
+          display.value = "Error";
+        }
+      }
+
+      function toggleTheme() {
+        const currentTheme = html.getAttribute("data-theme");
+        const newTheme = currentTheme === "light" ? "dark" : "light";
+        html.setAttribute("data-theme", newTheme);
+        updateThemeIcon(newTheme);
+      }
+
+      function updateThemeIcon(theme) {
+        if (theme === "dark") {
+          themeIcon.innerHTML = `
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                `;
+        } else {
+          themeIcon.innerHTML = `
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                `;
+        }
+      }
+    </script>
+  </body>
+</html>
