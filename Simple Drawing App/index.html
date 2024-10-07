@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Drawing App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Drawing App</h1>
+        <div class="toolbar">
+            <label for="color">Choose Color: </label>
+            <input type="color" id="color" value="#000000">
+            <label for="brushSize">Brush Size: </label>
+            <input type="range" id="brushSize" min="1" max="20" value="5">
+            <button id="clear">Clear</button>
+        </div>
+        <canvas id="drawingCanvas"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
