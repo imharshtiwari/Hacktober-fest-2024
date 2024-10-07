@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KM to Meters and Miles Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .converter {
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        input[type="number"] {
+            width: 100%;
+            height: 30px;
+            margin-right: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Kilometers to Meters and Miles Converter</h2>
+
+    <div class="converter">
+        <input type="number" id="kmInput" placeholder="Enter kilometers">
+        <button onclick="convertKm()">Convert</button>
+    </div>
+
+    <p>Result:</p>
+    <div id="result"></div>
+
+    <script>
+        function convertKm() {
+            const km = parseFloat(document.getElementById('kmInput').value);
+
+            if (isNaN(km) || km < 0) {
+                document.getElementById('result').textContent = 'Please enter a valid positive number';
+                return;
+            }
+
+            const meters = km * 1000;
+            const miles = km * 0.621371;
+
+            document.getElementById('result').innerHTML =
+                `<strong>${km.toFixed(2)} km is equal to:</strong><br>`
+                + `${meters.toFixed(2)} meters<br>`
+                + `${miles.toFixed(2)} miles`;
+        }
+    </script>
+</body>
+</html>
