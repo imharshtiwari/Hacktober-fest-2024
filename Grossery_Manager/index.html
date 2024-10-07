@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery List Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="head">Grocery List Manager</h1>
+
+        <h2>Your Dietary Preferences</h2>
+        <input type="text" id="diet-preference" placeholder="Add Dietary Preference" />
+        <button id="add-preference-btn">Add Preference</button>
+        <ul id="preference-list"></ul>
+
+        <h2>Your Seasonal Produce</h2>
+        <ul id="seasonal-list"></ul>
+
+        <h2>Your Grocery List</h2>
+        <input type="text" id="grocery-item" placeholder="Add Grocery Item" />
+        <button id="add-item-btn">Add Item</button>
+        <button id="clear-grocery-btn">Clear Grocery List</button>
+        <button id="download-grocery-btn">Download Grocery List</button>
+        <ul id="grocery-list"></ul>
+
+        <h2>Your Allergies</h2>
+        <input type="text" id="allergy-item" placeholder="Add Allergy" />
+        <button id="add-allergy-btn">Add Allergy</button>
+        <button id="pop-allergy">Pop Allergy</button> <!-- New Pop button -->
+        <div id="popped-allergy" style="margin-top: 10px;"></div> <!-- Display popped allergy -->
+        <ul id="allergy-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
