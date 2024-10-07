@@ -1,0 +1,113 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Base Styles */
+body {
+    /* font-family: 'Arial', sans-serif; */
+    background-color: #fff3e6; /* Light orange background */
+    margin: 0;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif; /* Using Montserrat font */
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+#head {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #e67e22; /* Darker orange */
+    font-size: 2.8em;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; /* Ensuring headings use Montserrat */
+}
+
+h2 {
+    color: #333;
+    margin-top: 10px;
+    font-size: 1.6em;
+    font-family: 'Montserrat', sans-serif; /* Ensuring headings use Montserrat */
+}
+
+/* Input Styles */
+input {
+    padding: 12px;
+    margin-right: 10px;
+    width: 70%;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    transition: border 0.3s;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input:focus {
+    border-color: #e67e22; /* Darker orange on focus */
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    padding: 12px 20px;
+    background-color: #e67e22; /* Orange button */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button:hover {
+    background-color: #d35400; /* Darker orange on hover */
+    transform: translateY(-2px);
+}
+
+/* List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background: #ffebcc; /* Light orange for list items */
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+li:hover {
+    background-color: #ffe6b3; /* Slightly darker on hover */
+    transform: scale(1.02);
+}
+
+/* Download Button Styles */
+#download-grocery-btn {
+    margin-top: 20px;
+    background-color: #f39c12; /* Orange for download button */
+    border-radius: 8px;
+}
+
+#download-grocery-btn:hover {
+    background-color: #e67e22; /* Darker orange on hover */
+}
