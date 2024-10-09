@@ -58,6 +58,6 @@ terminal commands
 ```bash
 git push origin <branch-name>
 ```
-and mark this start
+and mark this star repository
 And All Set ...
 ⭐⭐⭐
