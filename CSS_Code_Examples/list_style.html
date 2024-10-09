@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS List style</title>
+    <style>
+        .list{
+            width: 300px;
+            height: 400px;
+            padding: 50px;
+            background-color: rgba(200, 0 , 0 ,0.5);
+            border:3px dotted black
+        }
+        .list h2{
+            border-bottom: 2px solid black;
+        }
+        ul{
+            list-style-type: square;
+            list-style-position: inside;
+            size: 30px
+        }
+        ol{
+            list-style-image: square;
+            list-style-type: upper-latin;
+            list-style-position: outside;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS List style</h1>
+    <div class="list">
+        <h3>Sense organs</h3>
+        <ul>
+            <li style="list-style-image: url(../images/ear.png);">Ear</li>
+            <li style="list-style-image: url(../images/eye.png);">Eye</li>
+            <li style="list-style-image: url(../images/skin.png);">Skin</li>
+            <li style="list-style-image: url(../images/tongue.png);">Tongue</li>
+            <li style="list-style-image: url(../images/nose.png);">Nose</li>
+        </ul>
+
+        <h3>Five Senses</h3>
+        <ol>
+            <li>Seanse of Hear</li>
+            <li>Sense of Sight</li>
+            <li>Sense of Touch</li>
+            <li>Sense of Taste</li>
+            <li>Sense of Smell</li>
+        </ol>
+    </div>
+</body>
+</html>
