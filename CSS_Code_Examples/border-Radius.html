@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Border-Radius</title>
+    <style>
+        body{
+            background-color: hotpink
+        }
+        h1{
+            border-bottom: 2px solid pink;
+        }
+        .box{
+            border: 8px dashed aqua;
+            width: 50%;
+            margin: auto;
+            padding: 10px;
+            background-color: pink
+        }
+        .parent{
+            width: 70%;
+            display: flex;
+            margin: 40px auto
+        }
+        .circle{
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            border-radius: 50%;
+            background-color: yellow;
+        }
+        .square{
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            border-radius: 0%;
+            background-color: yellow;
+            margin-left: 15px
+        }
+        .circlePart1{
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            border-top-left-radius: 100%;
+            border-top-right-radius: 0%;
+            background-color: yellow;
+            margin-left: 15px
+        }
+        .circlePart2{
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            border-top-left-radius: 0%;
+            border-top-right-radius: 100%;
+            background-color: yellow;
+            margin-left: 15px
+        }
+        .rounded{
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            border-radius: 20%;
+            background-color: yellow;
+            margin-left: 15px
+        }
+        .oval{
+            width: 150px;
+            height: 200px;
+            border: 2px solid black;
+            border-radius: 50%;
+            background-color: yellow;
+            margin-left: 15px
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Border-Radius</h1>
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ducimus laboriosam, aliquam incidunt doloremque velit ipsum rerum porro ipsam vero! Et nisi earum aliquid quod voluptas iusto modi voluptatibus distinctio.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum excepturi quas quia ipsam aut laborum vero optio. Harum quasi at eos facere soluta consequatur? Rem officia optio omnis perspiciatis repellat?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, accusamus modi aspernatur pariatur fugit, veritatis repellendus labore repellat corporis, commodi velit illo unde minima a deleniti eligendi cumque dignissimos tempora.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sunt voluptatem autem quis officia tempora sint quam odit modi quae nobis quaerat libero, laboriosam laborum aliquam suscipit, natus esse? Laboriosam.
+        </p>
+    </div>
+    <div class="parent">
+
+        <div class="circle">
+
+        </div>
+        <div class="square">
+
+        </div>
+        <div class="circlePart1">
+
+        </div>
+        <div class="circlePart2">
+
+        </div>
+        <div class="rounded">
+
+        </div>
+        <div class="oval">
+
+        </div>
+    </div>
+</body>
+</html>
