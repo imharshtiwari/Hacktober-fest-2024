@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Box-Shadow</title>
+    <style>
+        h1{
+            border-bottom: 2px solid rgb(255, 130, 58);
+        }
+        .parent{
+            display: flex;
+        }
+        .box1{
+            width: 15%;
+            height: 200px;
+            margin: auto;
+            padding: 20px;
+            border: 10px double black;
+            background-color: rgb(255, 130, 58);
+            box-shadow: 3px 3px 3px black
+        }
+        .box2{
+            width: 15%;
+            height: 200px;
+            margin: auto;
+            padding: 20px;
+            border: 10px double black;
+            background-color: rgb(255, 130, 58);
+            box-shadow: -3px -3px 3px black
+        }
+        .box3{
+            width: 15%;
+            height: 200px;
+            margin: auto;
+            padding: 20px;
+            border: 10px double black;
+            background-color: rgb(255, 130, 58);
+            box-shadow: 3px 3px 2px 2px black, 6px 6px 2px 4px lawngreen, 9px 9px 2px 8px purple
+        }
+        .box4{
+            width: 15%;
+            height: 200px;
+            margin: auto;
+            padding: 20px;
+            border: 10px double black;
+            background-color: rgb(255, 130, 58);
+            box-shadow: 6px 6px 2px 4px lawngreen inset;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Box-Shadow</h1>
+    <div class="parent">
+        <div class="box1">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id perspiciatis, at nisi provident eligendi ipsum illum illo nihil dolorem dolorum quibusdam, magni quis eaque, doloremque nostrum molestiae exercitationem? Illo, laudantium.
+        </p>
+        </div>
+        <div class="box2">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id perspiciatis, at nisi provident eligendi ipsum illum illo nihil dolorem dolorum quibusdam, magni quis eaque, doloremque nostrum molestiae exercitationem? Illo, laudantium.
+        </p>
+        </div>
+        <div class="box3">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id perspiciatis, at nisi provident eligendi ipsum illum illo nihil dolorem dolorum quibusdam, magni quis eaque, doloremque nostrum molestiae exercitationem? Illo, laudantium.
+        </p>
+        </div>
+        <div class="box4">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id perspiciatis, at nisi provident eligendi ipsum illum illo nihil dolorem dolorum quibusdam, magni quis eaque, doloremque nostrum molestiae exercitationem? Illo, laudantium.
+        </p>
+        </div>
+    </div>
+</body>
+</html>
