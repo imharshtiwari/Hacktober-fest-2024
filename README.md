@@ -28,7 +28,7 @@ Hacktoberfest® encourages participation in the open source community..
 if you want to use the terminal, use the following commands after you fork the repository , open the terminal type the given command
 
 ```bash
-git clone https://github.com/{your-github-username}/Hacktober-2020.git
+git clone https://github.com/{your-github-username}/hacktober-fest-2024.git
 ```
 
 ## Create a branch
