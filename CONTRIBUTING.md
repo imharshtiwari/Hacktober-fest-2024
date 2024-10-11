@@ -13,7 +13,7 @@ Welcome to Hacktoberfest 2024! 🎉 We're excited to help beginners make their f
 
 <img height="30" src="https://img.shields.io/badge/Beginner level-green.svg?&style=for-the-badge&logo=Beginner level&logoColor=blue" />
 
-1. **[Beginner Level 📁](https://github.com/Kushal997-das/Hacktoberfest-2024/blob/master/readme.md#task-1-add-your-program-question-and-solution-)**
+1. **[Beginner Level 📁](https://github.com/imharshtiwari/Hacktoberfest-2024)**
    - **Task 1**: [Add Your Program Question and Solution](https://github.com/imharshtiwari/Hacktoberfest-2024/) 😇
      - **Before you start**, please **star ⭐ this repo** and open an issue related to your programming question or solution.
      - Create a new folder for your programming question and its solution. The structure should look like this:
