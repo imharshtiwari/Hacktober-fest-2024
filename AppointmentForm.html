@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Form</title>
+  <link rel="stylesheet" href="styles.css">
+
+  
+</head>   
+  
+<body>
+  <div class="container content">
+
+    <h2>APPOINTMENT FORM</h2>
+
+    <form action="#" method="POST">
+      <label for="name">Patient's Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="SEX">Patient's SEX:</label>
+      <SELECT type="text" id="name" name="name" required>
+        <option value="SEX">FEMALE </option>
+        <option value="SEX">MALE</option>
+        <option value="SEX">OTHERS</option>
+
+    </SELECT>
+      <label for="aGE">Patient's AGE:</label>
+      <input type="text" id="name" name="name" required>
+
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="date">Preferred Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Preferred Time:</label>
+      <input type="time" id="time" name="time" required>
+
+      <label for="Department">Select Department:</label>
+      <select id="Department" name="Department" required>
+        <option value="" disabled selected>Select Department</option>
+        <option value="EMERH">EMERGENCY ONLY</option>
+ 
+       
+      </select>
+
+      <label for="Department">Select Department:</label>
+      <select id="Department" name="Department" required>
+        <option value="" disabled selected>Select Department</option>
+        <option value="NEUROLOGY">NEUROLOGY</option>
+        <option value="PSYCHIATRY">PSYCHIATRY </option>
+        <option value="CARDIOLOGY">CARDIOLOGY</option>
+        <option value="ONCOLOGY">ONCOLOGY</option>
+        <option value="GYNAECOLOGY">GYNAECOLOGY</option>
+        <option value="DERMETAOLOGY">DERMETAOLOGY</option>
+       
+      </select>
+
+      <label for="doctor">Select Doctor:</label>
+      <select id="doctor" name="doctor" required>
+        <option value="" disabled selected>Select Department</option>
+        <option value="NEUROLOGY">Dr.BRIJANSHI RASTOGI </option>
+        <option value="PSYCHIATRY">Dr.PALLAVI KATHAIT </option>
+        <option value="CARDIOLOGY">Dr.YOGESH JAIN</option>
+        <option value="ONCOLOGIST">Dr. MANYA GANDHI</option>
+        <option value="GYNAECOLOGY">Dr.PRIYANSHU DUBEY</option>
+        <option value="DERMETAOLOGY">Dr.KUSHAGRA BHARDWAJ</option>
+       
+      </select>
+
+    </select>
+
+    <label for="DAY AVAILABLE">Select Day:</label>
+    <select id="DAY" name="DAY" required>
+      <option value="" disabled selected>CHECK AVAILABLE DAY</option>
+      <option value="NEUROLOGY">MONDAY </option>
+      <option value="PSYCHIATRY">TUESDAY </option>
+      <option value="CARDIOLOGY">WEDNESDAY</option>
+      <option value="ONCOLOGIST">THURSDAY</option>
+      <option value="GYNAECOLOGY">FRIDAY</option>
+      <option value="DERMETAOLOGY">SATURDAY</option>
+      <option value="ONLY EMERGENCY">SUNDAY</option>
+
+    </select>
+
+      <label for="reason">Reason for Appointment:</label>
+      <textarea id="reason" name="reason" rows="4" required></textarea>
+
+      <label for="notes">Additional Notes:</label>
+      <textarea id="notes" name="notes" rows="4"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
