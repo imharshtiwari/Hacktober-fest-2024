@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magic 8-Ball</title>
+</head>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column;">
+  <h1>Ask the Magic 8-Ball!</h1>
+  <input type="text" placeholder="Your Question..." id="questionInput" />
+  <button onclick="shakeBall()">Shake</button>
+  <h2 id="response"></h2>
+
+  <script>
+    const responses = [
+      "Yes", "No", "Maybe", "Ask again later", "Definitely", 
+      "It is certain", "Unlikely", "Better not tell you now"
+    ];
+
+    function shakeBall() {
+      const response = responses[Math.floor(Math.random() * responses.length)];
+      document.getElementById('response').textContent = response;
+      document.getElementById('questionInput').value = '';
+    }
+  </script>
+</body>
+</html>
