@@ -70,4 +70,4 @@ Welcome to Hacktoberfest 2024! 🎉 We're excited to help beginners make their f
    git push -u origin <your_branch_name>
    ```
 
-Congratulations! 🎉 You've contributed to Hacktoberfest 2024!
+Congratulations! 🎉 You've contributed to Hacktoberfest 2024!..
